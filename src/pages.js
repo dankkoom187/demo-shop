@@ -11,6 +11,45 @@
   const params = new URLSearchParams(location.search);
   const page = document.body.dataset.page || 'home';
 
+  // структурированные данные: Google и Яндекс читают их для расширенных сниппетов
+  function setJsonLd(items) {
+    document.querySelectorAll('script[data-ld]').forEach((s) => s.remove());
+    items.forEach((item) => {
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.dataset.ld = '1';
+      s.textContent = JSON.stringify(item);
+      document.head.appendChild(s);
+    });
+  }
+
+  // title, description, canonical и OG для страниц с данными из URL
+  function setMeta(title, description) {
+    document.title = title;
+    const set = (sel, attr, value) => {
+      const el = document.querySelector(sel);
+      if (el) el.setAttribute(attr, value);
+    };
+    set('meta[name="description"]', 'content', description);
+    set('meta[property="og:title"]', 'content', title);
+    set('meta[property="og:description"]', 'content', description);
+    set('meta[property="og:url"]', 'content', location.href);
+    set('link[rel="canonical"]', 'href', location.href);
+  }
+
+  function breadcrumbs(list) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: list.map(([name, url], i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name,
+        item: url
+      }))
+    };
+  }
+
   /* ---------- главная и 404: витрина ---------- */
   function initHome() {
     P().renderFeatured('#featuredGrid', 6);
@@ -20,7 +59,7 @@
   function initProduct() {
     const id = params.get('id');
     const p = productById(id) || P().PRODUCTS[0];
-    document.title = `${p.name} — ПЛЁНКА ПРО`;
+    setMeta(`${p.name} — ${p.code} | интернет-магазин плёнок`, p.desc);
 
     const crumb = $('#productCrumb');
     if (crumb) crumb.textContent = p.name;
@@ -142,6 +181,31 @@
 
     const hidden = $('#questionProduct');
     if (hidden) hidden.value = `${p.name} (${p.code})`;
+
+    // микроразметка товара: цена, наличие, артикул
+    setJsonLd([
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: p.name,
+        sku: p.code,
+        description: p.desc,
+        category: p.catLabel,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'RUB',
+          price: p.price,
+          availability: 'https://schema.org/InStock',
+          url: location.href
+        }
+      },
+      breadcrumbs([
+        ['Главная', 'index.html'],
+        ['Каталог', 'catalog.html'],
+        [p.name, `product.html?id=${encodeURIComponent(p.id)}`]
+      ])
+    ]);
+
     P().bindForm('productQuestionForm', 'Вопрос отправлен менеджеру');
   }
 
@@ -207,7 +271,7 @@
   function initArticle() {
     const slug = params.get('slug');
     const a = ARTICLES.find((x) => x.slug === slug) || ARTICLES[0];
-    document.title = `${a.title} — ПЛЁНКА ПРО`;
+    setMeta(`${a.title} — гид по выбору`, a.excerpt);
     const crumb = $('#articleCrumb');
     if (crumb) crumb.textContent = a.title;
 
@@ -232,6 +296,25 @@
       $('#relatedArticles').hidden = false;
       $('#relatedArticlesGrid').innerHTML = related.map(articleCardHtml).join('');
     }
+
+    setJsonLd([
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: a.title,
+        description: a.excerpt,
+        articleSection: a.tag,
+        inLanguage: 'ru',
+        datePublished: a.date,
+        author: { '@type': 'Organization', name: 'Интернет-магазин защитных плёнок' },
+        publisher: { '@type': 'Organization', name: 'Интернет-магазин защитных плёнок' }
+      },
+      breadcrumbs([
+        ['Главная', 'index.html'],
+        ['Гид по выбору', 'guide.html'],
+        [a.title, `article.html?slug=${a.slug}`]
+      ])
+    ]);
   }
 
   /* ---------- корзина и оформление ---------- */

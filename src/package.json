@@ -17,7 +17,8 @@
     "publish": "npm run build && node tools/publish.js",
     "anonymize": "node tools/anonymize.js",
     "avatars": "node tools/avatar.js",
-    "pages": "node tools/pages.js"
+    "pages": "node tools/pages.js",
+    "covers": "node tools/covers.js"
   },
   "devDependencies": {
     "axe-core": "^4.14.0",

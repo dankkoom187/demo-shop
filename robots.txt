@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /cart.html
+
+Sitemap: https://dankkoom187.github.io/demo-shop/sitemap.xml
