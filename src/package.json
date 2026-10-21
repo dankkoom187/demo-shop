@@ -1,0 +1,28 @@
+{
+  "name": "plenka-pro-landing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Прототип лендинга интернет-магазина защитных плёнок (портфолио-кейс, Tilda-ready)",
+  "scripts": {
+    "dev": "node tools/serve.js",
+    "build": "node tools/build-pages.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{html,css,js,mjs,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,mjs,json,md}\"",
+    "check": "npm run lint && npm run format:check && npm run build && npm test && npm run audit",
+    "test": "node tools/check-pages.js && node tools/smoke.js",
+    "audit": "node tools/audit.js",
+    "shots": "node tools/shots.js",
+    "publish": "npm run build && node tools/publish.js",
+    "anonymize": "node tools/anonymize.js",
+    "avatars": "node tools/avatar.js",
+    "pages": "node tools/pages.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "puppeteer-core": "^23.6.0"
+  }
+}

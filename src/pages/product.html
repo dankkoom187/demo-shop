@@ -1,0 +1,73 @@
+<section class="page-head page-head-tight">
+  <div class="container">
+    <nav class="crumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a><span>/</span><a href="catalog.html">Каталог</a><span>/</span>
+      <span id="productCrumb">Товар</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section section-top">
+  <div class="container">
+    <div class="product-page" id="productPage">
+      <p class="loading">Загружаем карточку товара…</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="relatedBlock" hidden>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Похожие товары</span>
+        <h2>С этой плёнкой обычно берут</h2>
+      </div>
+      <a class="link-arrow" href="catalog.html">Весь каталог →</a>
+    </div>
+    <div class="grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Вопрос о товаре</span>
+        <h2>Уточним детали по этой позиции</h2>
+      </div>
+      <p class="section-note">Вопрос уходит менеджеру вместе с составом заказа.</p>
+    </div>
+
+    <form class="lead-form form-light" id="productQuestionForm" novalidate>
+      <input type="hidden" id="questionProduct" name="product" />
+      <div class="field-row">
+        <div class="field">
+          <label for="qName">Имя</label>
+          <input id="qName" name="name" type="text" placeholder="Как к вам обращаться" required />
+        </div>
+        <div class="field">
+          <label for="qPhone">Телефон</label>
+          <input id="qPhone" name="phone" type="tel" placeholder="+7 900 000-00-00" required />
+        </div>
+      </div>
+      <div class="field">
+        <label for="qMessage">Вопрос</label>
+        <textarea
+          id="qMessage"
+          name="message"
+          rows="3"
+          placeholder="Подойдёт ли на мой автомобиль, сколько рулонов нужно"
+        ></textarea>
+      </div>
+      <label class="check">
+        <input type="checkbox" id="qConsent" required />
+        <span
+          >Согласен на обработку персональных данных и принимаю
+          <a href="privacy.html">политику конфиденциальности</a></span
+        >
+      </label>
+      <button class="solid-btn lg full" type="submit">Отправить вопрос</button>
+      <p class="form-hint">Демо-прототип: заявка никуда не отправляется.</p>
+    </form>
+  </div>
+</section>

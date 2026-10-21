@@ -1,0 +1,25 @@
+<div class="overlay" id="overlay" hidden></div>
+
+<aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Корзина">
+  <div class="drawer-head">
+    <h3>Корзина</h3>
+    <button class="icon-close" type="button" data-close="cartDrawer" aria-label="Закрыть">×</button>
+  </div>
+
+  <div class="drawer-body" id="cartBody"></div>
+
+  <div class="drawer-foot" id="cartFoot" hidden>
+    <div class="sum-row"><span>Товары</span><b id="cartSubtotal">0 ₽</b></div>
+    <label class="check small">
+      <input type="checkbox" id="firstOrder" checked />
+      <span>Первый заказ — применить скидку 10%</span>
+    </label>
+    <div class="sum-row discount" id="discountRow"><span>Скидка 10%</span><b id="cartDiscount">0 ₽</b></div>
+    <div class="sum-row total"><span>Итого</span><b id="cartTotal">0 ₽</b></div>
+    <a class="solid-btn full" href="cart.html">Оформить заказ</a>
+    <a class="link-btn full-link" href="cart.html">Открыть страницу корзины</a>
+    <p class="form-hint">Оплата картой для физлиц, счёт для юрлиц и ИП.</p>
+  </div>
+</aside>
+
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>

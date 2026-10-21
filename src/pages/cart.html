@@ -1,0 +1,130 @@
+<section class="page-head page-head-tight">
+  <div class="container">
+    <nav class="crumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a><span>/</span><span>Корзина и оформление</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section section-top">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Оформление</span>
+        <h1>Корзина и оформление заказа</h1>
+      </div>
+      <p class="section-note">Плёнка — целыми рулонами, керамика — поштучно. Шаг количества — 1.</p>
+    </div>
+
+    <div class="cart-layout">
+      <div class="cart-page" id="cartPage">
+        <p class="loading">Загружаем корзину…</p>
+      </div>
+
+      <aside class="cart-summary" id="cartSummary">
+        <h2>Итог</h2>
+        <div class="sum-row"><span>Товары</span><b id="sumSubtotal">0 ₽</b></div>
+        <label class="check small">
+          <input type="checkbox" id="pageFirstOrder" checked />
+          <span>Первый заказ — применить скидку 10%</span>
+        </label>
+        <div class="sum-row discount" id="pageDiscountRow"><span>Скидка 10%</span><b id="sumDiscount">0 ₽</b></div>
+        <div class="sum-row total"><span>Итого</span><b id="sumTotal">0 ₽</b></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="order-form">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Оформление</span>
+        <h2>Данные получателя</h2>
+      </div>
+      <p class="section-note">Физлица оплачивают онлайн, юрлица и ИП — по счёту.</p>
+    </div>
+
+    <form class="lead-form form-light" id="orderForm" novalidate>
+      <div class="field">
+        <label>Тип покупателя</label>
+        <div class="segmented" id="orderBuyer">
+          <button type="button" class="seg active" data-buyer="person">Физлицо</button>
+          <button type="button" class="seg" data-buyer="company">Юрлицо / ИП</button>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="oName">Имя</label>
+          <input id="oName" name="name" type="text" placeholder="Иван" required />
+        </div>
+        <div class="field">
+          <label for="oPhone">Телефон</label>
+          <input id="oPhone" name="phone" type="tel" placeholder="+7 900 000-00-00" required />
+        </div>
+      </div>
+      <div class="field">
+        <label for="oEmail">E-mail</label>
+        <input id="oEmail" name="email" type="email" placeholder="mail@example.ru" required />
+      </div>
+
+      <div class="company-fields" id="orderCompanyFields" hidden>
+        <div class="field-row">
+          <div class="field">
+            <label for="oCompany">Компания</label>
+            <input id="oCompany" name="company" type="text" placeholder="ООО «Пример»" />
+          </div>
+          <div class="field">
+            <label for="oInn">ИНН</label>
+            <input id="oInn" name="inn" type="text" placeholder="10 или 12 цифр" />
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="oDelivery">Способ получения</label>
+        <select id="oDelivery" name="delivery">
+          <option value="tk">Транспортная компания</option>
+          <option value="spb">Курьер по Санкт-Петербургу</option>
+          <option value="pickup">Самовывоз</option>
+        </select>
+      </div>
+
+      <div class="field" id="orderAddressField">
+        <label for="oAddress">Город и адрес / пункт выдачи</label>
+        <input id="oAddress" name="address" type="text" placeholder="Санкт-Петербург, ул. Примерная, 1" />
+      </div>
+
+      <div class="field">
+        <label for="oComment">Комментарий</label>
+        <textarea
+          id="oComment"
+          name="comment"
+          rows="2"
+          placeholder="Удобное время связи, особенности доставки"
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label>Способ оплаты</label>
+        <div class="radio-row">
+          <label class="radio"
+            ><input type="radio" name="pay" value="online" checked /><span>Онлайн картой</span></label
+          >
+          <label class="radio"><input type="radio" name="pay" value="invoice" /><span>Счёт для юрлица</span></label>
+          <label class="radio"><input type="radio" name="pay" value="cash" /><span>При получении</span></label>
+        </div>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="oConsent" required />
+        <span>Согласен на обработку персональных данных и принимаю <a href="offer.html">условия оферты</a></span>
+      </label>
+
+      <div class="sum-row total"><span>К оплате</span><b id="orderTotal">0 ₽</b></div>
+      <button class="solid-btn lg full" type="submit">Подтвердить заказ</button>
+      <p class="form-hint">Демо-прототип: заказ никуда не отправляется.</p>
+    </form>
+  </div>
+</section>

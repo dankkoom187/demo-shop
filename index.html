@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Интернет-магазин защитных плёнок и керамических покрытий</title>
+    <meta
+      name="description"
+      content="Интернет-магазин защитных плёнок и керамических покрытий: каталог с фильтрами, карточки товаров, сравнение, корзина и оформление заказа. Демонстрационный проект."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230e1116'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle'%3E%D0%9F%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+</html>
+
+  <body data-page="home">
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="24" height="16" rx="3"/><circle cx="11" cy="16" r="3.2"/><circle cx="21" cy="16" r="3.2"/></svg></span>
+      <span class="logo-text">Плёнки</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="catalog.html">Каталог</a>
+      <a href="compare.html">Сравнение</a>
+      <a href="guide.html">Гид по выбору</a>
+      <a href="delivery.html">Оплата и доставка</a>
+      <a href="about.html">О компании</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+78005553535">+7 900 000-00-00</a>
+      <a class="ghost-btn" href="compare.html" id="compareBtn">
+        Сравнить<span class="counter" id="compareCount">0</span>
+      </a>
+      <button class="solid-btn" type="button" id="cartBtn">Корзина<span class="counter" id="cartCount">0</span></button>
+      <button class="burger" type="button" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="catalog.html">Каталог</a>
+    <a href="compare.html">Сравнение</a>
+    <a href="guide.html">Гид по выбору</a>
+    <a href="delivery.html">Оплата и доставка</a>
+    <a href="about.html">О компании</a>
+    <a href="partners.html">Сотрудничество</a>
+    <a class="mobile-phone" href="tel:+78005553535">+7 900 000-00-00</a>
+  </div>
+</header>
+
+
+    <main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="pill">−10% на первый заказ</span>
+      <h1>Защита кузова, оптики и стекла — плёнки и керамика с гарантией</h1>
+      <p class="lead">
+        100+ позиций в наличии. Продаём целыми рулонами, отгружаем по России за 1 день. Поможем подобрать плёнку под
+        задачу и бюджет.
+      </p>
+      <div class="hero-actions">
+        <a class="solid-btn lg" href="catalog.html">Смотреть каталог</a>
+        <button class="ghost-btn lg" type="button" data-scroll-to="lead">Подобрать плёнку</button>
+      </div>
+      <dl class="hero-stats">
+        <div>
+          <dt>104</dt>
+          <dd>товарные позиции</dd>
+        </div>
+        <div>
+          <dt>6</dt>
+          <dd>категорий</dd>
+        </div>
+        <div>
+          <dt>до 10 лет</dt>
+          <dd>заявленный срок службы</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="swatch-card s1">
+        <span class="swatch-chip" style="--c: #cfd8dc"></span><b>Плёнка прозрачная 200</b><i>прозрачная · 200 мкм</i>
+      </div>
+      <div class="swatch-card s2">
+        <span class="swatch-chip" style="--c: #e8a0b4"></span><b>Плёнка переливная 220</b><i>цветная · пудровый</i>
+      </div>
+      <div class="swatch-card s3">
+        <span class="swatch-chip" style="--c: #141618"></span><b>Плёнка глянцевая 1,80</b><i>цветная · графит</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="usp">
+      <li><b>Целые рулоны</b><span>минимум и шаг — 1 рулон</span></li>
+      <li><b>Гарантия до 10 лет</b><span>заводская, по каждой серии</span></li>
+      <li><b>Отгрузка за 1 день</b><span>со склада в Санкт-Петербурге</span></li>
+      <li><b>Доставка по РФ</b><span>ТК, курьер, самовывоз</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Каталог</span>
+        <h2>Шесть категорий под разные задачи</h2>
+      </div>
+      <p class="section-note">
+        Не знаете, что выбрать? <a href="#lead">Оставьте заявку</a> — подберём под ваш автомобиль.
+      </p>
+    </div>
+
+    <div class="cats">
+      <a class="cat-card" href="catalog.html?cat=transparent">
+        <span class="cat-visual" style="--c1: #dfe7ec; --c2: #b9c6cf"></span>
+        <b>Прозрачные</b><i>20 позиций</i>
+      </a>
+      <a class="cat-card" href="catalog.html?cat=matte">
+        <span class="cat-visual" style="--c1: #3a4046; --c2: #1d2226"></span>
+        <b>Матовые</b><i>6 позиций</i>
+      </a>
+      <a class="cat-card" href="catalog.html?cat=colored">
+        <span class="cat-visual cat-rainbow"></span>
+        <b>Цветные</b><i>79 оттенков</i>
+      </a>
+      <a class="cat-card" href="catalog.html?cat=optics">
+        <span class="cat-visual" style="--c1: #e6f4ff; --c2: #9fc9ee"></span>
+        <b>Для оптики</b><i>7 позиций</i>
+      </a>
+      <a class="cat-card" href="catalog.html?cat=glass">
+        <span class="cat-visual" style="--c1: #cfe6ff; --c2: #7fb0dd"></span>
+        <b>Для лобового стекла</b><i>4 позиции</i>
+      </a>
+      <a class="cat-card" href="catalog.html?cat=ceramic">
+        <span class="cat-visual" style="--c1: #f2d59a; --c2: #c9942f"></span>
+        <b>Керамические покрытия</b><i>5 позиций</i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="featured">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Каталог</span>
+        <h2>Популярные позиции</h2>
+      </div>
+      <a class="link-arrow" href="catalog.html">Весь каталог — 100+ товаров →</a>
+    </div>
+
+    <div class="grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="compare">
+  <div class="container compare-promo">
+    <div>
+      <span class="kicker">Сравнение</span>
+      <h2>Сравнивайте плёнки по делу</h2>
+      <p>
+        Отметьте до четырёх позиций в каталоге — и увидите поверхность, толщину, Top Coat, основу, клеевой слой, размер
+        рулона, срок службы и цену в одной таблице. Кузов, оптика и стекло сравниваются внутри своих групп.
+      </p>
+      <a class="solid-btn" href="compare.html">Открыть сравнение</a>
+    </div>
+    <ul class="compare-params">
+      <li>Поверхность</li>
+      <li>Толщина</li>
+      <li>Top Coat</li>
+      <li>Основа и клей</li>
+      <li>Размер рулона</li>
+      <li>Срок службы</li>
+      <li>Цена за рулон</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-soft" id="delivery">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Оплата и доставка</span>
+        <h2>Как получить заказ</h2>
+      </div>
+    </div>
+    <div class="cards-3">
+      <article class="info-card">
+        <span class="info-num">01</span>
+        <h3>Физлицам — онлайн</h3>
+        <p>
+          Оплата картой на сайте. Статус «Оплачен» приходит от платёжного сервиса, а не по переходу на страницу
+          результата.
+        </p>
+      </article>
+      <article class="info-card">
+        <span class="info-num">02</span>
+        <h3>Юрлицам и ИП — счёт</h3>
+        <p>Заявка уходит менеджеру в CRM. Он уточняет реквизиты, выставляет счёт и готовит документы.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-num">03</span>
+        <h3>Доставка</h3>
+        <p>
+          Транспортной компанией, курьером по Санкт-Петербургу или самовывозом. Стоимость доставки оплачивает
+          покупатель.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Гид по выбору</span>
+        <h2>Разбираемся перед покупкой</h2>
+      </div>
+      <a class="link-arrow" href="guide.html">Все статьи →</a>
+    </div>
+    <div class="cards-3">
+      <a class="article-card" href="article.html?slug=transparent-vs-matte">
+        <span class="article-tag">Кузов</span>
+        <h3>Прозрачная или матовая: что выбрать для ежедневной эксплуатации</h3>
+        <p>Сравниваем стойкость к сколам, внешний вид и требования к уходу.</p>
+        <span class="article-meta">6 мин чтения</span>
+      </a>
+      <a class="article-card" href="article.html?slug=film-for-optics">
+        <span class="article-tag">Оптика</span>
+        <h3>Плёнка на фары: зачем нужна и почему толщина решает</h3>
+        <p>Что даёт защита оптики и как не испортить световой поток.</p>
+        <span class="article-meta">4 мин чтения</span>
+      </a>
+      <a class="article-card" href="article.html?slug=ceramic-9h-vs-10h">
+        <span class="article-tag">Керамика</span>
+        <h3>Керамика 9H и 10H: разница, которую видно через год</h3>
+        <p>Гидрофоб, стойкость к реагентам и реальный ресурс покрытия.</p>
+        <span class="article-meta">8 мин чтения</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="lead">
+  <div class="container lead-grid">
+    <div class="lead-copy">
+      <span class="kicker light">Подбор</span>
+      <h2>Подберём плёнку под ваш автомобиль</h2>
+      <p>Ответим на вопросы, посчитаем количество рулонов и подскажем, что реально нужно, а на чём можно сэкономить.</p>
+      <ul class="lead-list">
+        <li>Скидка 10% на первый заказ для физлиц, компаний и ИП</li>
+        <li>Без навязывания: считаем по площади, а не «на всякий случай»</li>
+        <li>Ответ в течение рабочего дня</li>
+      </ul>
+    </div>
+
+    <form class="lead-form" id="leadForm" novalidate>
+      <div class="field">
+        <label for="buyerType">Тип покупателя</label>
+        <select id="buyerType" name="buyerType">
+          <option value="person">Физическое лицо</option>
+          <option value="company">Юридическое лицо / ИП</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="leadName">Имя</label>
+          <input id="leadName" name="name" type="text" placeholder="Как к вам обращаться" required />
+        </div>
+        <div class="field">
+          <label for="leadPhone">Телефон</label>
+          <input id="leadPhone" name="phone" type="tel" placeholder="+7 900 000-00-00" required />
+        </div>
+      </div>
+      <div class="field">
+        <label for="leadMessage">Вопрос</label>
+        <textarea id="leadMessage" name="message" rows="3" placeholder="Марка авто, что защищаем, сроки"></textarea>
+      </div>
+      <label class="check">
+        <input type="checkbox" id="leadConsent" required />
+        <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+      </label>
+      <button class="solid-btn lg full" type="submit">Отправить заявку</button>
+      <p class="form-hint">Нажимая кнопку, вы соглашаетесь с условиями обработки данных.</p>
+    </form>
+  </div>
+</section>
+
+    </main>
+
+<footer class="site-footer" id="contacts">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="24" height="16" rx="3"/><circle cx="11" cy="16" r="3.2"/><circle cx="21" cy="16" r="3.2"/></svg></span><span class="logo-text">Плёнки</span>
+      </a>
+      <p class="footer-note">Защитные плёнки и керамические покрытия. Отгрузка по России.</p>
+    </div>
+    <div>
+      <h2>Каталог</h2>
+      <a href="catalog.html?cat=transparent">Прозрачные</a>
+      <a href="catalog.html?cat=matte">Матовая</a>
+      <a href="catalog.html?cat=colored">Цветные</a>
+      <a href="catalog.html?cat=optics">Для оптики</a>
+      <a href="catalog.html?cat=glass">Для лобового стекла</a>
+      <a href="catalog.html?cat=ceramic">Керамика</a>
+    </div>
+    <div>
+      <h2>Покупателям</h2>
+      <a href="delivery.html">Оплата и доставка</a>
+      <a href="delivery.html#warranty">Гарантия и возврат</a>
+      <a href="guide.html">Гид по выбору</a>
+      <a href="compare.html">Сравнение</a>
+      <a href="partners.html">Сотрудничество</a>
+    </div>
+    <div>
+      <h2>Контакты</h2>
+      <a href="tel:+78005553535">+7 900 000-00-00</a>
+      <a href="mailto:mail@example.ru">mail@example.ru</a>
+      <span>Пн–Пт, 10:00–19:00</span>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026. Демонстрационный проект: товары, цены и контакты вымышлены.</span>
+    <span>
+      <a href="privacy.html">Политика конфиденциальности</a> · <a href="offer.html">Публичная оферта</a> ·
+      <a href="refund.html">Возврат и гарантия</a>
+    </span>
+  </div>
+</footer>
+
+
+<div class="overlay" id="overlay" hidden></div>
+
+<aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Корзина">
+  <div class="drawer-head">
+    <h3>Корзина</h3>
+    <button class="icon-close" type="button" data-close="cartDrawer" aria-label="Закрыть">×</button>
+  </div>
+
+  <div class="drawer-body" id="cartBody"></div>
+
+  <div class="drawer-foot" id="cartFoot" hidden>
+    <div class="sum-row"><span>Товары</span><b id="cartSubtotal">0 ₽</b></div>
+    <label class="check small">
+      <input type="checkbox" id="firstOrder" checked />
+      <span>Первый заказ — применить скидку 10%</span>
+    </label>
+    <div class="sum-row discount" id="discountRow"><span>Скидка 10%</span><b id="cartDiscount">0 ₽</b></div>
+    <div class="sum-row total"><span>Итого</span><b id="cartTotal">0 ₽</b></div>
+    <a class="solid-btn full" href="cart.html">Оформить заказ</a>
+    <a class="link-btn full-link" href="cart.html">Открыть страницу корзины</a>
+    <p class="form-hint">Оплата картой для физлиц, счёт для юрлиц и ИП.</p>
+  </div>
+</aside>
+
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script src="pages.js"></script>
+  </body>
+</html>

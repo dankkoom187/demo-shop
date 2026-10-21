@@ -1,0 +1,118 @@
+<section class="page-head">
+  <div class="container">
+    <nav class="crumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a><span>/</span><span>Каталог</span>
+    </nav>
+    <h1>Каталог защитных плёнок и керамических покрытий</h1>
+    <p class="lead">
+      104 товарные позиции: 20 защитных плёнок, 79 цветных плёнок и 5 керамических покрытий. Плёнка продаётся только
+      целыми рулонами — минимум и шаг 1 рулон.
+    </p>
+    <ul class="page-facts">
+      <li><b>6</b> категорий</li>
+      <li><b>150–200</b> мкм толщина</li>
+      <li><b>до 10 лет</b> срок службы</li>
+      <li><b>−10%</b> на первый заказ</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="catalog">
+      <aside class="filters" id="filters">
+        <div class="filter-block">
+          <h2>Тип</h2>
+          <div class="filter-list" id="catFilters"></div>
+        </div>
+
+        <div class="filter-block">
+          <h2>Толщина, мкм</h2>
+          <div class="chips" id="thicknessFilters">
+            <button class="chip" type="button" data-thickness="150">150</button>
+            <button class="chip" type="button" data-thickness="180">180</button>
+            <button class="chip" type="button" data-thickness="200">200</button>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <h2>Цена, до</h2>
+          <input
+            class="range"
+            type="range"
+            id="priceRange"
+            min="5000"
+            max="40000"
+            step="500"
+            value="40000"
+            aria-label="Максимальная цена, рублей"
+          />
+          <div class="range-value"><span id="priceValue">40 000 ₽</span></div>
+        </div>
+
+        <button class="link-btn" type="button" id="resetFilters">Сбросить фильтры</button>
+      </aside>
+
+      <div class="catalog-main">
+        <div class="toolbar">
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Поиск по названию или коду"
+              aria-label="Поиск по названию или коду"
+            />
+          </label>
+          <select id="sortSelect" class="select" aria-label="Сортировка">
+            <option value="popular">Сначала популярные</option>
+            <option value="price-asc">Сначала дешевле</option>
+            <option value="price-desc">Сначала дороже</option>
+          </select>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+        <div class="empty" id="emptyState" hidden>
+          <b>Ничего не найдено</b>
+          <p>Попробуйте изменить фильтры или сбросить их.</p>
+          <button class="ghost-btn" type="button" id="emptyReset">Сбросить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Подбор</span>
+        <h2>Не уверены, что подойдёт?</h2>
+      </div>
+      <p class="section-note">
+        Опишите задачу — <a href="about.html#contact-form">менеджер подберёт</a> плёнку и посчитает количество рулонов.
+      </p>
+    </div>
+    <div class="cards-3">
+      <article class="info-card">
+        <span class="info-num">01</span>
+        <h3>Плёнка на кузов</h3>
+        <p>Прозрачная, матовая или цветная. Подскажем толщину под срок службы и тип мойки.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-num">02</span>
+        <h3>Защита оптики</h3>
+        <p>Тонкие плёнки для фар без изменения светового потока и без выгорания.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-num">03</span>
+        <h3>Керамика</h3>
+        <p>Жидкие покрытия 9H и 10H: гидрофоб, стойкость к реагентам, ресурс до 3 лет.</p>
+      </article>
+    </div>
+  </div>
+</section>

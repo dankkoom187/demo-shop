@@ -1,0 +1,102 @@
+<section class="page-head">
+  <div class="container">
+    <nav class="crumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a><span>/</span><span>Сотрудничество</span>
+    </nav>
+    <h1>Сотрудничество</h1>
+    <p class="lead">
+      Автосервисам, дилерам и оптовым клиентам — индивидуальные условия, отсрочка и документы. Персональные цены
+      рассчитываем вручную, автоматический расчёт в магазине не требуется.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Кому подходит</span>
+        <h2>Три формата сотрудничества</h2>
+      </div>
+    </div>
+    <div class="cards-3">
+      <article class="info-card">
+        <span class="info-num">01</span>
+        <h3>Для автосервисов</h3>
+        <p>Постоянный запас ходовых позиций, приоритетная отгрузка, обучение сотрудников оклейке.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-num">02</span>
+        <h3>Для дилеров</h3>
+        <p>Партнёрские цены на регулярные закупки, закрывающие документы, отсрочка платежа по договору.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-num">03</span>
+        <h3>Для оптовиков</h3>
+        <p>Крупные партии с разбивкой по рулонам, помощь с логистикой в регионы.</p>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      <h3>Как это работает</h3>
+      <p>
+        Вы оставляете заявку — менеджер связывается, уточняет объёмы и номенклатуру, готовит коммерческое предложение и
+        счёт. Все заявки и заказы передаются напрямую вам, региональным представителям не перенаправляются.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Партнёрские условия</span>
+        <h2>Заявка на сотрудничество</h2>
+      </div>
+      <p class="section-note">Менеджер подготовит условия и счёт.</p>
+    </div>
+
+    <form class="lead-form form-light" id="partnerForm" novalidate>
+      <div class="field">
+        <label for="pType">Тип сотрудничества</label>
+        <select id="pType" name="type">
+          <option value="service">Автосервис</option>
+          <option value="dealer">Дилер</option>
+          <option value="wholesale">Оптовик</option>
+          <option value="other">Другое</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pCompany">Компания</label>
+          <input id="pCompany" name="company" type="text" placeholder="ООО «Пример»" required />
+        </div>
+        <div class="field">
+          <label for="pInn">ИНН</label>
+          <input id="pInn" name="inn" type="text" placeholder="10 или 12 цифр" required />
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pName">Контактное лицо</label>
+          <input id="pName" name="name" type="text" placeholder="Имя и фамилия" required />
+        </div>
+        <div class="field">
+          <label for="pPhone">Телефон</label>
+          <input id="pPhone" name="phone" type="tel" placeholder="+7 900 000-00-00" required />
+        </div>
+      </div>
+      <div class="field">
+        <label for="pMessage">Запрос</label>
+        <textarea id="pMessage" name="message" rows="3" placeholder="Какие позиции и объёмы интересуют"></textarea>
+      </div>
+      <label class="check">
+        <input type="checkbox" id="pConsent" required />
+        <span>Согласен на обработку персональных данных</span>
+      </label>
+      <button class="solid-btn lg full" type="submit">Отправить заявку</button>
+      <p class="form-hint">Демо-прототип: заявка никуда не отправляется.</p>
+    </form>
+  </div>
+</section>

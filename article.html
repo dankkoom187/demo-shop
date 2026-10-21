@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Интернет-магазин защитных плёнок и керамических покрытий</title>
+    <meta
+      name="description"
+      content="Интернет-магазин защитных плёнок и керамических покрытий: каталог с фильтрами, карточки товаров, сравнение, корзина и оформление заказа. Демонстрационный проект."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230e1116'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle'%3E%D0%9F%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+</html>
+
+  <body data-page="article">
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="24" height="16" rx="3"/><circle cx="11" cy="16" r="3.2"/><circle cx="21" cy="16" r="3.2"/></svg></span>
+      <span class="logo-text">Плёнки</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="catalog.html">Каталог</a>
+      <a href="compare.html">Сравнение</a>
+      <a href="guide.html">Гид по выбору</a>
+      <a href="delivery.html">Оплата и доставка</a>
+      <a href="about.html">О компании</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+78005553535">+7 900 000-00-00</a>
+      <a class="ghost-btn" href="compare.html" id="compareBtn">
+        Сравнить<span class="counter" id="compareCount">0</span>
+      </a>
+      <button class="solid-btn" type="button" id="cartBtn">Корзина<span class="counter" id="cartCount">0</span></button>
+      <button class="burger" type="button" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="catalog.html">Каталог</a>
+    <a href="compare.html">Сравнение</a>
+    <a href="guide.html">Гид по выбору</a>
+    <a href="delivery.html">Оплата и доставка</a>
+    <a href="about.html">О компании</a>
+    <a href="partners.html">Сотрудничество</a>
+    <a class="mobile-phone" href="tel:+78005553535">+7 900 000-00-00</a>
+  </div>
+</header>
+
+
+    <main>
+<section class="page-head page-head-tight">
+  <div class="container">
+    <nav class="crumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a><span>/</span><a href="guide.html">Гид по выбору</a><span>/</span>
+      <span id="articleCrumb">Статья</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section section-top">
+  <div class="container">
+    <article class="article" id="articlePage">
+      <p class="loading">Загружаем статью…</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section-soft" id="relatedArticles" hidden>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Читайте также</span>
+        <h2>Другие материалы</h2>
+      </div>
+      <a class="link-arrow" href="guide.html">Все статьи →</a>
+    </div>
+    <div class="articles-grid" id="relatedArticlesGrid"></div>
+  </div>
+</section>
+
+    </main>
+
+<footer class="site-footer" id="contacts">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="24" height="16" rx="3"/><circle cx="11" cy="16" r="3.2"/><circle cx="21" cy="16" r="3.2"/></svg></span><span class="logo-text">Плёнки</span>
+      </a>
+      <p class="footer-note">Защитные плёнки и керамические покрытия. Отгрузка по России.</p>
+    </div>
+    <div>
+      <h2>Каталог</h2>
+      <a href="catalog.html?cat=transparent">Прозрачные</a>
+      <a href="catalog.html?cat=matte">Матовая</a>
+      <a href="catalog.html?cat=colored">Цветные</a>
+      <a href="catalog.html?cat=optics">Для оптики</a>
+      <a href="catalog.html?cat=glass">Для лобового стекла</a>
+      <a href="catalog.html?cat=ceramic">Керамика</a>
+    </div>
+    <div>
+      <h2>Покупателям</h2>
+      <a href="delivery.html">Оплата и доставка</a>
+      <a href="delivery.html#warranty">Гарантия и возврат</a>
+      <a href="guide.html">Гид по выбору</a>
+      <a href="compare.html">Сравнение</a>
+      <a href="partners.html">Сотрудничество</a>
+    </div>
+    <div>
+      <h2>Контакты</h2>
+      <a href="tel:+78005553535">+7 900 000-00-00</a>
+      <a href="mailto:mail@example.ru">mail@example.ru</a>
+      <span>Пн–Пт, 10:00–19:00</span>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026. Демонстрационный проект: товары, цены и контакты вымышлены.</span>
+    <span>
+      <a href="privacy.html">Политика конфиденциальности</a> · <a href="offer.html">Публичная оферта</a> ·
+      <a href="refund.html">Возврат и гарантия</a>
+    </span>
+  </div>
+</footer>
+
+
+<div class="overlay" id="overlay" hidden></div>
+
+<aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Корзина">
+  <div class="drawer-head">
+    <h3>Корзина</h3>
+    <button class="icon-close" type="button" data-close="cartDrawer" aria-label="Закрыть">×</button>
+  </div>
+
+  <div class="drawer-body" id="cartBody"></div>
+
+  <div class="drawer-foot" id="cartFoot" hidden>
+    <div class="sum-row"><span>Товары</span><b id="cartSubtotal">0 ₽</b></div>
+    <label class="check small">
+      <input type="checkbox" id="firstOrder" checked />
+      <span>Первый заказ — применить скидку 10%</span>
+    </label>
+    <div class="sum-row discount" id="discountRow"><span>Скидка 10%</span><b id="cartDiscount">0 ₽</b></div>
+    <div class="sum-row total"><span>Итого</span><b id="cartTotal">0 ₽</b></div>
+    <a class="solid-btn full" href="cart.html">Оформить заказ</a>
+    <a class="link-btn full-link" href="cart.html">Открыть страницу корзины</a>
+    <p class="form-hint">Оплата картой для физлиц, счёт для юрлиц и ИП.</p>
+  </div>
+</aside>
+
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script src="pages.js"></script>
+  </body>
+</html>
